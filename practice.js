@@ -10,3 +10,10 @@
 //Solution:
 let areYouPlayingBanjo = (name) => name[0] === 'r' || name[0] === 'R' ? `${name} plays banjo` : `${name} does not play banjo`
 
+
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+
+const findUniq = (arr) => arr.find(v => arr.indexOf(v) === arr.lastIndexOf(v))

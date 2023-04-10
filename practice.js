@@ -64,3 +64,12 @@ function high(s){
 //with number two as the base and integer n as the exponent.
 
 const isPowerOfTwo = (n) => Number.isInteger(Math.log2(n))
+
+// Complete the function that accepts a string parameter, and reverses each word in the string.
+//All spaces in the string should be retained.
+
+const reverseWords = str => {
+  let arr = str.split(" ")
+  let result = arr.map(i => i.split("").reverse().join(""))
+  return result.join(" ")
+}

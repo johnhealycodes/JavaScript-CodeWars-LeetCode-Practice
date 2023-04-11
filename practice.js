@@ -114,3 +114,11 @@ const createPhoneNumber = (numbers) => {
 // Write a function to split a string and convert it into an array of words.
 
 const stringToArray = (s) => s.split(" ")
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+
+const abbrevName = (name) => {
+  let arr = name.toUpperCase().split(" ")
+  return `${arr[0][0]}.${arr[1][0]}`
+}

@@ -122,3 +122,7 @@ const abbrevName = (name) => {
   let arr = name.toUpperCase().split(" ")
   return `${arr[0][0]}.${arr[1][0]}`
 }
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+const squareSum = (n) => n.map(i => i*i).reduce((a, c) => a + c, 0)

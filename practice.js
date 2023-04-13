@@ -143,3 +143,8 @@ const printerError = (s) => {
   let result = s.split("").filter(i => i > "m")
   return `${result.length}/${s.length}`
 }
+
+// This time no story, no theory. The examples below show you how to write function accum:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+
+const accum = (s) => s.split("").map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-')

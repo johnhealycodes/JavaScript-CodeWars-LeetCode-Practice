@@ -156,3 +156,10 @@ const findShort = (s) => {
   let a = s.split(" ").sort((a, b) => a.length - b.length)
   return a[0].length
 }
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+
+const camelCase = (s) => s.split("").map(i => i === i.toUpperCase() ? i = ` ${i}` : i).join("")

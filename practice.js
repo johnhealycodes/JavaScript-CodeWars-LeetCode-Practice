@@ -167,3 +167,9 @@ const camelCase = (s) => s.split("").map(i => i === i.toUpperCase() ? i = ` ${i}
 // Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 
 const repeatStr = (n, s) => s.repeat(n)
+
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+
+const getCount = (s) => s.split("").filter(i => i.toLowerCase() === 'a' || i.toLowerCase() === 'e' || i.toLowerCase() === 'i' || i.toLowerCase() === 'o' || i.toLowerCase() === 'u').length

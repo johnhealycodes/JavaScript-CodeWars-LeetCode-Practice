@@ -163,3 +163,7 @@ const findShort = (s) => {
 // "camelCasing"  =>  "camel Casing"
 
 const camelCase = (s) => s.split("").map(i => i === i.toUpperCase() ? i = ` ${i}` : i).join("")
+
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+const repeatStr = (n, s) => s.repeat(n)

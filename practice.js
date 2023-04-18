@@ -215,3 +215,8 @@ const highAndLow = (n) => {
 //  Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 
 const sumMix = (x) => x.map(i => Number(i)).reduce((a,c) => a + c, 0)
+
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+// Complete the method which accepts such an array, and returns that single different number.
+
+const stray = (n) => n.find(i => n.indexOf(i) === n.lastIndexOf(i))

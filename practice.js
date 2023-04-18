@@ -204,3 +204,10 @@ const getRealFloor = (n) => n <= 0  ? n : n < 13 ? n - 1 : n - 2
 // Output will consist of a list of string values stating whether the respective member is to be placed in the senior or open category.
 
 const openOrSenior = (data) => data.map(([age, handicap]) => (age > 54 && handicap > 7 ? 'Senior' : 'Open'))
+
+//In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+const highAndLow = (n) => {
+  let result = n.split(" ").sort((a, b) => a - b)
+  return `${result[result.length - 1]} ${result[0]}`
+ }

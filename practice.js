@@ -220,3 +220,7 @@ const sumMix = (x) => x.map(i => Number(i)).reduce((a,c) => a + c, 0)
 // Complete the method which accepts such an array, and returns that single different number.
 
 const stray = (n) => n.find(i => n.indexOf(i) === n.lastIndexOf(i))
+
+// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+const findNeedle = (haystack) => `found the needle at position ${haystack.indexOf('needle')}`

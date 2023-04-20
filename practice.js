@@ -224,3 +224,7 @@ const stray = (n) => n.find(i => n.indexOf(i) === n.lastIndexOf(i))
 // Write a function findNeedle() that takes an array full of junk but containing one "needle"
 
 const findNeedle = (haystack) => `found the needle at position ${haystack.indexOf('needle')}`
+
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+const sortByLength = (a) => a.sort((a, b) => a.length - b.length)

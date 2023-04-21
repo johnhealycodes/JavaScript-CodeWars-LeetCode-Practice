@@ -228,3 +228,15 @@ const findNeedle = (haystack) => `found the needle at position ${haystack.indexO
 // Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
 
 const sortByLength = (a) => a.sort((a, b) => a.length - b.length)
+
+// Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+// The pipes connecting your level's stages together need to be fixed before you receive any more complaints.
+// Pipes list is correct when each pipe after the first index is greater (+1) than the previous one, and that there is no duplicates.
+
+const pipeFix = (num) =>{
+  let result = []
+  for (i = num[0]; i <= num[num.length - 1]; i++){
+    result.push(i)
+  }
+  return result
+}

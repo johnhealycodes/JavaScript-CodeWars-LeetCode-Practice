@@ -244,3 +244,26 @@ const pipeFix = (num) =>{
 // This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
 const simpleMultiplication = (n) => n % 2 === 0 ? n*8 : n*9
+
+// The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
+// The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer,
+//-1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
+// If the score < 0, return 0.
+
+const examScore = (a1, a2) => {
+  result = 0
+  for (i = 1; i < a1.length; i++){
+    if (a1[i] === a2[i]){
+      result += 4
+    } else if (a2[i] === ""){
+      result += 0
+    } else {
+      result -= 1
+    }
+  }
+  if (result < 0){
+    result = 0
+  }
+  return result
+}
+

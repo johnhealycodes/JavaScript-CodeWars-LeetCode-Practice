@@ -267,3 +267,7 @@ const examScore = (a1, a2) => {
   return result
 }
 
+// Write a program that checks if a word can go through the "Green Glass Door"
+// Example: You can take the moon, but not the sun.
+
+const stepThroughWith = (s) => s.split("").reduce((a, c, i) => c === s[i+1] ? true : a, false)

@@ -280,3 +280,7 @@ const squareDigits =(n) =>{
   let a = s.split("").map(i => i*i).join("")
   return +a
 }
+
+// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+
+const flattenAndSort = (a) => [].concat(...a).sort((a,b) => a - b)

@@ -271,3 +271,12 @@ const examScore = (a1, a2) => {
 // Example: You can take the moon, but not the sun.
 
 const stepThroughWith = (s) => s.split("").reduce((a, c, i) => c === s[i+1] ? true : a, false)
+
+// In this kata, you are asked to square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+const squareDigits =(n) =>{
+  let s = n.toString()
+  let a = s.split("").map(i => i*i).join("")
+  return +a
+}

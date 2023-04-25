@@ -301,3 +301,80 @@ function getGrade (s1, s2, s3) {
     return 'F'
   }
 }
+
+//Examples of Async/Await via Fireship.io
+
+import fetch from 'node-fetch'
+
+const promise = fetch('https://jsonplaceholder.typicode.com/todos/1')
+
+promise
+  .then(res => res.json())
+  .then(user => console.log('🥺', user.title))
+  .catch(err => console.log('😭', err))
+
+console.log('🥪 Synchronus')
+
+//Async
+
+const getFruit = async(name) => {
+  const fruits = {
+    pineapple: '🍍',
+    peach: '🍑',
+    strawberry: '🍓'
+  }
+
+    return Promise.resolve(fruits[name])
+}
+
+getFruit('peach').then(console.log)
+
+//Async and Await
+
+const makeSmoothie = async() => {
+  const a = await getFruit('pineapple')
+  const b = await getFruit('peach')
+  const smoothie = await Promise.all([a,b])
+
+  return smoothie
+}
+
+makeSmoothie().then(log)
+
+
+const badSmoothie = async() => {
+  try{
+    const a = getFruit('pineapple')
+    const b = getFruit('peach')
+
+    const smoothie = await Promise.all([a,b])
+
+    throw 'broken'
+
+    return smoothie
+  } catch(err){
+    console.log(err)
+    //return `😬 We are going to be fine`
+    throw `💩 It's broken`
+  }
+}
+
+// 
+
+const fruits = ['peach', 'pineapple', 'strawberry']
+
+const smoothie = fruits.map(i => getFruit(i))
+
+const fruitLoop = async() => {
+  for await(const emoji of smoothie) {
+    log(emoji)
+  }
+}
+
+// 
+
+const fruitInspection = async() => {
+  if (await getFruit('peach') === '🍑') {
+    console.log('Looks peachy!')
+  }
+}

@@ -427,3 +427,7 @@ const xor = (a, b) => {
     return true
   }
 }
+
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+const sumArray = (a) => a ? a.sort((a, b) => a - b).slice(1, -1).reduce((a, b) => a + b, 0) : 0

@@ -431,3 +431,16 @@ const xor = (a, b) => {
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
 
 const sumArray = (a) => a ? a.sort((a, b) => a - b).slice(1, -1).reduce((a, b) => a + b, 0) : 0
+
+// Given a string str, reverse it and omit all non-alphabetic characters.
+
+function reverseLetter(str) {
+    let reversedString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (str[i].toLowerCase() === str[i].toUpperCase()) {
+            continue;
+        }
+        reversedString += str[i];
+    }
+    return reversedString;
+}

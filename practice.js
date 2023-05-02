@@ -444,3 +444,7 @@ function reverseLetter(str) {
     }
     return reversedString;
 }
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+const replace = s => (s.split('').map(i => 'aeiou'.includes(i.toLowerCase()) ? '!' : i)).join('');

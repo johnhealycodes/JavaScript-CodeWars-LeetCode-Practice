@@ -467,3 +467,7 @@ const multiTable = (number) => {
 // A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
 
 const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate) ? true : false
+
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+const findUnique = (a) => a.find(i => a.indexOf(i) === a.lastIndexOf(i))

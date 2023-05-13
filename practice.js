@@ -477,3 +477,8 @@ const findUnique = (a) => a.find(i => a.indexOf(i) === a.lastIndexOf(i))
 // You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
 
 const litres = (t) => Math.floor(t * .5)
+
+// Given an array of integers, return a new array with each value doubled.
+
+const doubled = (x) => x.map(i => i*2)
+

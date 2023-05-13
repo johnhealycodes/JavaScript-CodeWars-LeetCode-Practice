@@ -482,3 +482,8 @@ const litres = (t) => Math.floor(t * .5)
 
 const doubled = (x) => x.map(i => i*2)
 
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list.
+//If there are multiple elements with the same value, remove the one with a lower index.
+//If you get an empty array/list, return an empty array/list.
+
+const removeSmallest = (num) => num.filter((n, i) => i !== num.indexOf(Math.min(...num)))

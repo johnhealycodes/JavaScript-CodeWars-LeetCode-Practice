@@ -500,3 +500,7 @@ const dontGiveMeFive = (start, end) => {
   }
   return result
 }
+
+// Create a function which compares two probabilities, returning true if the first one is most likely otherwise false.
+
+const mostLikely = (prob1,prob2) => prob1.split(":").reduce((a, c) => a / c) >= prob2.split(":").reduce((a, c) => a / c) ? true : false

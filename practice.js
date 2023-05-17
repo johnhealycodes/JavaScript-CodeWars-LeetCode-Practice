@@ -504,3 +504,14 @@ const dontGiveMeFive = (start, end) => {
 // Create a function which compares two probabilities, returning true if the first one is most likely otherwise false.
 
 const mostLikely = (prob1,prob2) => prob1.split(":").reduce((a, c) => a / c) >= prob2.split(":").reduce((a, c) => a / c) ? true : false
+
+// Write a program that finds the summation of every number from 1 to num.
+//The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+  let a = []
+  for (i = 1; i <= num; i++){
+    a.push(i)
+  }
+  return a.reduce((a, c) => a + c)
+}

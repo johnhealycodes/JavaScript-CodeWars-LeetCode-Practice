@@ -526,3 +526,8 @@ const getSum = (a, b) => {
       max = Math.max(a, b);
   return (max - min + 1) * (min + max) / 2;
 }
+
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string.
+//If this is not clear enough, here are some examples:
+
+const reverse = (s) => s.split(" ").reverse().join(" ")

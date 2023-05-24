@@ -531,3 +531,8 @@ const getSum = (a, b) => {
 //If this is not clear enough, here are some examples:
 
 const reverse = (s) => s.split(" ").reverse().join(" ")
+
+// Implement a function that adds two numbers together and returns their sum in binary.
+//The conversion can be done before, or after the addition.
+
+const addBinary = (a,b) => (a + b).toString(2)

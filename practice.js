@@ -536,3 +536,7 @@ const reverse = (s) => s.split(" ").reverse().join(" ")
 //The conversion can be done before, or after the addition.
 
 const addBinary = (a,b) => (a + b).toString(2)
+
+// Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+const remove = (s) => s.endsWith('!') ? s.slice(0, -1) : s

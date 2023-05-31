@@ -551,3 +551,19 @@ function noBoringZeros(n) {
   }
   return n
 }
+
+// Write a function that will convert a string into title case, given an optional list of exceptions (minor words). 
+//The list of minor words will be given as a string with each word separated by a space.
+
+function titleCase(title, minorWords) {
+  const minorArr = minorWords ? minorWords.toLowerCase().split(' ') : [];
+  return title.toLowerCase()
+    .split(' ')
+    .map((word, i) => {
+      if (!word) return word;
+      if (minorArr.indexOf(word) !== -1 && i !== 0) return word;
+      
+      return word[0].toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
